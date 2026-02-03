@@ -1,0 +1,14 @@
+{
+  "model": "llama-3.3-70b-versatile",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Eres un analista experto. Tu trabajo es clasificar tweets. \n\nInstrucciones:\n1. Analiza el sentimiento.\n2. Responde ÚNICAMENTE con un JSON válido.\n3. Formato: {\"sentimiento\": \"POSITIVO\" | \"NEGATIVO\" | \"NEUTRAL\", \"confianza\": 0.0-1.0}."
+    },
+    {
+      "role": "user",
+      "content": "{{ $json['Describe tu problema o comentario'] }}"
+    }
+  ],
+  "temperature": 0
+}
